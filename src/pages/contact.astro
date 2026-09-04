@@ -21,22 +21,5 @@ import { site } from '../data/site';
       <span class="min-w-0 break-all">{site.email}</span>
     </a>
 
-    <p class="mt-10 font-bold text-ink">Elsewhere</p>
-    <ul class="mt-4 flex items-center gap-3">
-      {site.socials.map((s) => (
-        <li>
-          <a
-            href={s.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={s.label}
-            title={s.label}
-            class:list={['press grid h-12 w-12 place-items-center rounded-full border-2 border-ink text-ink shadow-hard', s.color]}
-          >
-            <Icon name={s.icon} class="h-5 w-5" />
-          </a>
-        </li>
-      ))}
-    </ul>
   </div>
 </Base>

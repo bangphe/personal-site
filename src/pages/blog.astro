@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PostCard from '../components/PostCard.astro';
+import Icon from '../components/Icon.astro';
+import { getMediumPosts } from '../lib/medium';
+import { site } from '../data/site';
+
+// Runs at build time — see src/lib/medium.ts.
+const posts = await getMediumPosts();
+const medium = site.socials.find((s) => s.label === 'Medium')!.url;
+---
+<Base title="Blog" description={`Articles written by ${site.name} on Medium.`}>
+  <PageHeader eyebrow="What I've written" title="Blog" />
+
+  {posts.length > 0 ? (
+    <>
+      <ul class="grid list-none gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {posts.map((p, i) => <PostCard {...p} index={i} />)}
+      </ul>
+
+      <a
+        href={medium}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="press mt-12 inline-flex items-center gap-2 border-2 border-ink bg-blue px-5 py-3 text-base font-bold text-ink shadow-hard"
+      >
+        Read more on Medium
+        <Icon name="arrow" class="h-4 w-4" />
+      </a>
+    </>
+  ) : (
+    <div class="max-w-prose border-2 border-ink bg-white p-6 shadow-hard">
+      <p class="text-muted">
+        Posts couldn&rsquo;t be loaded from Medium at build time.
+      </p>
+      <a
+        href={medium}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-3 inline-flex items-center gap-1.5 font-bold text-ink underline decoration-2 underline-offset-4"
+      >
+        Read them on Medium
+        <Icon name="external" class="h-4 w-4" />
+      </a>
+    </div>
+  )}
+</Base>

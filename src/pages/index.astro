@@ -1,7 +1,31 @@
 ---
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
+import { site } from '../data/site';
 ---
 <Base>
   <Hero />
+
+  <section id="about" class="border-t-2 border-ink py-14 sm:py-20">
+    <h2 class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">About</h2>
+
+    <div class="mt-8 max-w-prose space-y-5 text-base leading-relaxed text-muted sm:text-lg">
+      {/* TODO(verify): replace with your own bio. */}
+      <p>
+        I&rsquo;m a backend engineer based in {site.location}. I work mostly in
+        Node.js, Go, PHP and .NET, designing and maintaining REST APIs and the
+        services behind them.
+      </p>
+      <p>
+        Most of my work has been on systems where correctness and throughput
+        matter &mdash; banking applications handling high transaction volumes,
+        data migrations, and the test coverage that keeps them safe to change.
+      </p>
+      <p>
+        Outside of shipping features, I care about the parts that make a codebase
+        survivable: clear boundaries, tests that fail for the right reasons, and
+        documentation someone can actually follow.
+      </p>
+    </div>
+  </section>
 </Base>

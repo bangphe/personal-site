@@ -10,6 +10,12 @@ export default defineConfig({
 
   integrations: [sitemap()],
 
+  // Medium's CDN images are downloaded and re-encoded at build time, so the
+  // page serves them from its own origin: no third-party requests or cookies.
+  image: {
+    domains: ['cdn-images-1.medium.com'],
+  },
+
   // Plus Jakarta Sans — geometric grotesque matching the reference, and an
   // Indonesian typeface. Downloaded and self-hosted at build time.
   fonts: [

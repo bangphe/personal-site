@@ -16,12 +16,12 @@ export const site = {
   socials: [
     { label: 'GitHub', url: 'https://github.com/bangphe', icon: 'github', color: 'bg-blue' },
     { label: 'LinkedIn', url: 'https://id.linkedin.com/in/rizkypurnawan', icon: 'linkedin', color: 'bg-green' },
-    { label: 'Medium', url: 'https://medium.com/@rizky.purnawan', icon: 'medium', color: 'bg-pink' },
+    { label: 'Medium', url: 'https://medium.com/@rizky.purnawan', icon: 'medium', color: 'bg-lilac' },
   ],
   nav: [
-    { href: '/about', label: 'About' },
     { href: '/experience', label: 'Experience' },
     { href: '/projects', label: 'Projects' },
+    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ],
 } as const;

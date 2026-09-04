@@ -1,6 +1,5 @@
 ---
 import { site } from '../data/site';
-import Icon from './Icon.astro';
 ---
 <section class="grid items-center gap-12 py-14 sm:py-20 md:grid-cols-2 md:gap-10">
   <div>
@@ -21,25 +20,6 @@ import Icon from './Icon.astro';
       {site.ctaLabel}
     </a>
 
-    <ul class="mt-10 flex items-center gap-3">
-      {site.socials.map((s) => (
-        <li>
-          <a
-            href={s.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={s.label}
-            title={s.label}
-            class:list={[
-              'press grid h-10 w-10 place-items-center rounded-full border-2 border-ink text-ink shadow-hard-sm',
-              s.color,
-            ]}
-          >
-            <Icon name={s.icon} class="h-4 w-4" />
-          </a>
-        </li>
-      ))}
-    </ul>
   </div>
 
   <div class="relative mx-auto w-full max-w-xs md:max-w-sm">
@@ -56,7 +36,7 @@ import Icon from './Icon.astro';
     <!-- Decorative badges, echoing the reference's floating chips. -->
     <span
       aria-hidden="true"
-      class="absolute -left-4 -top-4 grid h-14 w-14 place-items-center rounded-xl border-2 border-ink bg-pink font-mono text-[10px] font-bold leading-tight text-ink shadow-hard-sm"
+      class="absolute -left-4 -top-4 grid h-14 w-14 place-items-center rounded-xl border-2 border-ink bg-lilac font-mono text-[10px] font-bold leading-tight text-ink shadow-hard-sm"
     >&lt;/&gt;</span>
     <span
       aria-hidden="true"
