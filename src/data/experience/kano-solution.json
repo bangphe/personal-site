@@ -1,17 +1,50 @@
 {
   "company": "Kano Solution",
   "role": "Senior Software Engineer",
-  "start": "TODO(verify)",
+  "start": "2020-04",
   "end": null,
-  "location": "Surabaya, Indonesia",
-  "summary": "TODO(verify) — Promoted from Software Engineer to Senior Software Engineer, working across backend services and front-end delivery.",
-  "highlights": [
-    "TODO(verify) — Rebuilt the AUCYBERSCAPE website end to end.",
-    "TODO(verify) — Added unit test coverage across Vue and Golang codebases.",
-    "TODO(verify) — Wrote a Golang migration tool to move data from MySQL to MongoDB.",
-    "TODO(verify) — Developed and maintained REST APIs against defined technical requirements."
+  "location": "Surabaya, East Java, Indonesia",
+  "employmentType": "Full-time",
+  "workMode": "Remote",
+  "logo": "/logos/kano-solution.png",
+  "url": "https://kanosolution.com/",
+  "summary": "Kano is an IT company professional in developing a solution to the company's technological system, either Enterprise Resources Planning, BIG Data management.",
+  "highlights": [],
+  "projects": [
+    {
+      "name": "Maintenance EZD",
+      "role": "Full Stack Engineer",
+      "responsibilities": [
+        "Ensure all deliverables meet technical specifications and requirements.",
+        "Develop and maintain software code on a daily basis, supporting team objectives to meet project deadlines and enhance codebase quality.",
+        "Collaborate effectively with cross-functional team members to achieve project goals.",
+        "Design, develop, and maintain RESTful API services.",
+        "Optimize and maintain database systems for improved server performance and storage efficiency.",
+        "Implement robust data security measures and protection protocols.",
+        "Develop and maintain MySQL Stored Procedures for generating daily and weekly user reports.",
+        "Create and maintain Golang scripts for automated email notifications during CITA upload processes, specifically for rejected data scenarios."
+      ],
+      "tools": ["CodeIgniter", "Kendo UI", "MySQL", "Golang"]
+    },
+    {
+      "name": "Training Digitalization — Sampoerna",
+      "role": "Full Stack Engineer",
+      "responsibilities": [
+        "Collaborate effectively with cross-functional team members to achieve project goals.",
+        "Design, develop, and maintain RESTful API services.",
+        "Optimize and maintain database systems for improved server performance and storage efficiency."
+      ],
+      "tools": [".NET", "AJAX", "Microsoft SQL Server"]
+    },
+    {
+      "name": "Sampoerna Karya Bangsa",
+      "role": "Backend Engineer",
+      "description": "SETC is owned by Sampoerna as an integrated entrepreneurship center, this is used as a platform to maintain the company's reputation through training and mentoring for MSMEs in Indonesia. The SETC website is an online site that can be accessed by everyone.",
+      "responsibilities": [],
+      "tools": ["Laravel", "MySQL"]
+    }
   ],
-  "stack": ["Golang", "Vue", "MongoDB", "MySQL", "REST API"],
+  "stack": ["Laravel", "JavaScript", "Golang", "CodeIgniter", ".NET", "MySQL", "Microsoft SQL Server", "Kendo UI"],
   "order": 1,
-  "unverified": true
+  "unverified": false
 }

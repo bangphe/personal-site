@@ -1,0 +1,22 @@
+{
+  "company": "EACIIT (Big Data & Digitisation)",
+  "role": "Software Engineer",
+  "start": "2017-05",
+  "end": "2020-04",
+  "location": "Surabaya, East Java, Indonesia",
+  "employmentType": "Full-time",
+  "workMode": "Hybrid",
+  "logo": "/logos/eaciit.png",
+  "url": "https://eaciit.com/",
+  "summary": "Wiyasa Teknologi Nusantara (EACIIT Indonesia) is a Big Data analysis developer for corporation. Located in Surabaya and has global clients in 11 countries.",
+  "highlights": [
+    "Collaborate with the backend developer to define and implement UI requirements.",
+    "Analyze and translate the client request into the UI wireframe.",
+    "Execute all design from concept to engineering.",
+    "Proficiency in HTML, CSS and JavaScript to apply in the UI."
+  ],
+  "projects": [],
+  "stack": [".NET Framework", "KnockoutJS", "HTML", "CSS", "JavaScript"],
+  "order": 2,
+  "unverified": false
+}

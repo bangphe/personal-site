@@ -19,8 +19,18 @@ const experience = defineCollection({
     // (e.g. "/logos/kano-solution.png"). Falls back to a monogram badge.
     logo: z.string().optional(),
     url: z.url().optional(),
+    employmentType: z.string().optional(),
+    workMode: z.string().optional(),
     summary: z.string(),
-    highlights: z.array(z.string()),
+    highlights: z.array(z.string()).default([]),
+    // Named engagements within one role, as LinkedIn lists them.
+    projects: z.array(z.object({
+      name: z.string(),
+      role: z.string().optional(),
+      description: z.string().optional(),
+      responsibilities: z.array(z.string()).default([]),
+      tools: z.array(z.string()).default([]),
+    })).default([]),
     stack: z.array(z.string()),
     order: z.number(),            // manual sort beats date-sort when roles overlap
     unverified: z.boolean().default(false),
