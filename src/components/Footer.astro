@@ -1,0 +1,27 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+const year = new Date().getFullYear();
+---
+<footer class="mt-24 border-t border-zinc-200 py-8 dark:border-zinc-800">
+  <div class="mx-auto flex max-w-prose flex-col items-center gap-4 px-6 sm:flex-row sm:justify-between">
+    <p class="text-sm text-zinc-500 dark:text-zinc-500">
+      &copy; {year} {site.name}. All rights reserved.
+    </p>
+    <ul class="flex items-center gap-1">
+      {site.socials.map((s) => (
+        <li>
+          <a
+            href={s.url}
+            target={s.url.startsWith('mailto:') ? undefined : '_blank'}
+            rel={s.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+            aria-label={s.label}
+            class="block rounded-md p-2 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-accent-600 dark:hover:bg-zinc-800 dark:hover:text-accent-400"
+          >
+            <Icon name={s.icon} />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</footer>

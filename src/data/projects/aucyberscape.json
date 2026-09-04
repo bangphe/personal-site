@@ -1,0 +1,11 @@
+{
+  "name": "AUCYBERSCAPE",
+  "type": "client",
+  "description": "TODO(verify) — I rebuilt the website and added unit test coverage across the Vue front end and Golang services.",
+  "platform": "Web App",
+  "stack": ["Vue", "Golang"],
+  "links": [],
+  "featured": true,
+  "order": 1,
+  "unverified": true
+}

@@ -1,0 +1,48 @@
+---
+import TechTag from './TechTag.astro';
+
+interface Props {
+  company: string; role: string; start: string; end: string | null;
+  location: string; summary: string; highlights: string[]; stack: string[];
+}
+const { company, role, start, end, location, summary, highlights, stack } = Astro.props;
+
+/** "2021-03" -> "Mar 2021". Passes through TODO(verify) and any non-date string. */
+function fmt(value: string | null): string {
+  if (value === null) return 'Present';
+  const m = /^(\d{4})-(\d{2})$/.exec(value);
+  if (!m) return value;
+  const date = new Date(Number(m[1]), Number(m[2]) - 1);
+  return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+}
+---
+<li class="relative border-l border-zinc-200 pb-10 pl-6 last:pb-0 dark:border-zinc-800">
+  <span class="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full bg-accent-500" aria-hidden="true"></span>
+
+  <div class="flex flex-col gap-x-3 gap-y-1 sm:flex-row sm:items-baseline sm:justify-between">
+    <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+      {role} <span class="font-normal text-zinc-500 dark:text-zinc-500">at</span> {company}
+    </h3>
+    <p class="shrink-0 font-mono text-xs text-zinc-500 dark:text-zinc-500">
+      {fmt(start)} &ndash; {fmt(end)}
+    </p>
+  </div>
+
+  <p class="mt-0.5 text-xs text-zinc-500 dark:text-zinc-500">{location}</p>
+  <p class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{summary}</p>
+
+  <ul class="mt-3 space-y-1.5">
+    {highlights.map((h) => (
+      <li class="flex gap-2.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-600" aria-hidden="true"></span>
+        <span>{h}</span>
+      </li>
+    ))}
+  </ul>
+
+  {stack.length > 0 && (
+    <ul class="mt-4 flex flex-wrap gap-1.5">
+      {stack.map((t) => <TechTag label={t} />)}
+    </ul>
+  )}
+</li>

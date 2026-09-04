@@ -1,0 +1,17 @@
+{
+  "company": "Kano Solution",
+  "role": "Senior Software Engineer",
+  "start": "TODO(verify)",
+  "end": null,
+  "location": "Surabaya, Indonesia",
+  "summary": "TODO(verify) — Promoted from Software Engineer to Senior Software Engineer, working across backend services and front-end delivery.",
+  "highlights": [
+    "TODO(verify) — Rebuilt the AUCYBERSCAPE website end to end.",
+    "TODO(verify) — Added unit test coverage across Vue and Golang codebases.",
+    "TODO(verify) — Wrote a Golang migration tool to move data from MySQL to MongoDB.",
+    "TODO(verify) — Developed and maintained REST APIs against defined technical requirements."
+  ],
+  "stack": ["Golang", "Vue", "MongoDB", "MySQL", "REST API"],
+  "order": 1,
+  "unverified": true
+}
