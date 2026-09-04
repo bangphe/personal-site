@@ -1,0 +1,31 @@
+---
+/**
+ * Dark code card standing in for a portrait. Pastel tokens on near-black read
+ * well above 7:1, and the block gives the light page a single anchor of weight.
+ */
+const file = 'rizky.php';
+---
+<div class="w-full border-2 border-ink shadow-hard-lg">
+  <!-- Window chrome -->
+  <div class="flex items-center gap-2 border-b-2 border-ink bg-ink px-3 py-2">
+    <span class="flex gap-1.5" aria-hidden="true">
+      <span class="h-2.5 w-2.5 rounded-full bg-lilac"></span>
+      <span class="h-2.5 w-2.5 rounded-full bg-cream"></span>
+      <span class="h-2.5 w-2.5 rounded-full bg-green"></span>
+    </span>
+    <span class="ml-1 font-mono text-xs text-white/60">{file}</span>
+  </div>
+
+  <!-- Wide lines scroll inside the card rather than widening the page. -->
+  <div class="overflow-x-auto bg-ink px-4 py-4 [scrollbar-width:thin]">
+    <pre class="font-mono text-[11px] leading-relaxed text-white/85 sm:text-xs"><code><span class="text-white/65">&lt;?php</span>
+
+<span class="text-blue">$rizky</span> <span class="text-white/60">=</span> [
+  <span class="text-cream">'role'</span>     <span class="text-white/60">=&gt;</span> <span class="text-green">'Backend Engineer'</span>,
+  <span class="text-cream">'location'</span> <span class="text-white/60">=&gt;</span> <span class="text-green">'Surabaya, Indonesia'</span>,
+  <span class="text-cream">'since'</span>    <span class="text-white/60">=&gt;</span> <span class="text-lilac">2017</span>,
+  <span class="text-cream">'stack'</span>    <span class="text-white/60">=&gt;</span> [<span class="text-green">'PHP'</span>, <span class="text-green">'.NET'</span>, <span class="text-green">'Go'</span>],
+  <span class="text-cream">'focus'</span>    <span class="text-white/60">=&gt;</span> <span class="text-green">'ERP &amp; enterprise systems'</span>,
+];</code></pre>
+  </div>
+</div>

@@ -1,18 +1,17 @@
 export const site = {
   name: 'Rizky Purnawan',
   firstName: 'Rizky',
-  // TODO(verify): your one-line positioning statement — this is the big headline.
-  headline: 'Building reliable backends',
   role: 'Backend Engineer',
   location: 'Surabaya, Indonesia',
+  // Shown in the hero, first person.
+  intro:
+    'I build and maintain enterprise systems — ERP, big data, and internal platforms — mostly in PHP, .NET and Go. Nine years, Surabaya, Indonesia.',
+  // Meta description, third person for search results.
   description:
-    'Indonesian Backend Engineer building reliable, high-throughput services with Node.js, Go and PHP.',
+    'Rizky Purnawan is a backend engineer in Surabaya, Indonesia, building enterprise systems — ERP, big data and internal platforms — in PHP, .NET and Go.',
   email: 'rizkypurnawan.dp@gmail.com',
   ctaLabel: "Let's talk backend",
   linkedin: 'https://id.linkedin.com/in/rizkypurnawan',
-  // TODO(verify): drop a square photo (>=500x500) at public/profile.jpg,
-  // then change this to '/profile.jpg'.
-  avatar: '/profile.svg',
   socials: [
     { label: 'GitHub', url: 'https://github.com/bangphe', icon: 'github', color: 'bg-blue' },
     { label: 'LinkedIn', url: 'https://id.linkedin.com/in/rizkypurnawan', icon: 'linkedin', color: 'bg-green' },
