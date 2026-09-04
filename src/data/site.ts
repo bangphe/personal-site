@@ -10,7 +10,7 @@ export const site = {
   description:
     'Rizky Purnawan is a backend engineer in Sidoarjo, Indonesia, building enterprise platforms, marketplaces and payment integrations in PHP and Node.js since 2012.',
   email: 'rizkypurnawan.dp@gmail.com',
-  ctaLabel: "Let's talk backend",
+  ctaLabel: "Get in touch",
   linkedin: 'https://id.linkedin.com/in/rizkypurnawan',
   socials: [
     { label: 'GitHub', url: 'https://github.com/bangphe', icon: 'github', color: 'bg-blue' },
