@@ -42,7 +42,10 @@ const projects = defineCollection({
   schema: z.object({
     name: z.string(),
     type: z.enum(['personal', 'client']),
+    role: z.string().optional(),
+    period: z.string().optional(),
     description: z.string(),
+    highlights: z.array(z.string()).default([]),
     platform: z.string(),
     stack: z.array(z.string()),
     links: z.array(z.object({ label: z.string(), url: z.url() })).default([]),

@@ -1,0 +1,17 @@
+{
+  "name": "Mabaat",
+  "type": "client",
+  "role": "Backend Engineer",
+  "period": "Sept 2024 — Jan 2026",
+  "description": "A digital property management platform in Saudi Arabia for luxury short- and medium-term rentals, delivered as a CMS, web app and mobile app.",
+  "highlights": [
+    "Built the backend with Node.js and Fastify against a PostgreSQL database via Prisma.",
+    "Served as the core logic layer powering data processing and API requests, integrating third-party services including Hostaway and Payfort, and enforcing secure access control."
+  ],
+  "platform": "Property Platform",
+  "stack": ["Node.js", "Fastify", "PostgreSQL", "Prisma"],
+  "links": [{ "label": "mabaat.com", "url": "https://mabaat.com" }],
+  "featured": true,
+  "order": 2,
+  "unverified": false
+}

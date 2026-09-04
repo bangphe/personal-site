@@ -5,10 +5,10 @@ export const site = {
   location: 'Surabaya, Indonesia',
   // Shown in the hero, first person.
   intro:
-    'I build and maintain enterprise systems — ERP, big data, and internal platforms — mostly in PHP, .NET and Go. Nine years, Surabaya, Indonesia.',
+    'I build and maintain the systems companies run on — ERP platforms, marketplaces, and the payment flows behind them — mostly in PHP and Node.js. Working on the web since 2012, from Surabaya, Indonesia.',
   // Meta description, third person for search results.
   description:
-    'Rizky Purnawan is a backend engineer in Surabaya, Indonesia, building enterprise systems — ERP, big data and internal platforms — in PHP, .NET and Go.',
+    'Rizky Purnawan is a backend engineer in Surabaya, Indonesia, building enterprise platforms, marketplaces and payment integrations in PHP and Node.js since 2012.',
   email: 'rizkypurnawan.dp@gmail.com',
   ctaLabel: "Let's talk backend",
   linkedin: 'https://id.linkedin.com/in/rizkypurnawan',

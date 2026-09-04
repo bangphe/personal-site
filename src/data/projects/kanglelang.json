@@ -1,0 +1,19 @@
+{
+  "name": "Kanglelang",
+  "type": "client",
+  "role": "Full Stack Engineer",
+  "period": "Feb 2025 — now",
+  "description": "An Indonesian online auction and marketplace platform, serving around 470 active sellers and 2,200 paid orders a month.",
+  "highlights": [
+    "Built and maintain the platform on Laravel 9 and MySQL, with a REST API serving the mobile app.",
+    "Designed the escrow payment flow on Xendit (QRIS and Virtual Account) with idempotent webhook handling, stock reservation, and automatic fund release on delivery confirmation.",
+    "Implemented the seller wallet as an internal ledger with automated payouts via the Xendit Disbursement API, using row-level locking and idempotency guards to prevent double-crediting and duplicate withdrawals.",
+    "Integrated multi-courier shipping (KiriminAja) and automated the order lifecycle: auto-refund on seller SLA breach, dispute resolution, and dangerous-goods detection that routes checkout to cargo services."
+  ],
+  "platform": "Marketplace",
+  "stack": ["Laravel", "Node.js", "MySQL", "REST API", "Xendit"],
+  "links": [{ "label": "kanglelang.com", "url": "https://kanglelang.com" }],
+  "featured": true,
+  "order": 1,
+  "unverified": false
+}

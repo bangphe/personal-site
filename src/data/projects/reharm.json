@@ -1,0 +1,17 @@
+{
+  "name": "Reharm",
+  "type": "client",
+  "role": "Backend Engineer",
+  "period": "Dec 2022 — Aug 2023",
+  "description": "An online music learning platform offering specialised, video-based courses focused on Jazz and Gospel.",
+  "highlights": [
+    "Built and maintained the RESTful APIs with Laravel.",
+    "Integrated the Midtrans payment gateway."
+  ],
+  "platform": "Learning Platform",
+  "stack": ["Laravel", "MySQL", "Midtrans", "Firebase"],
+  "links": [{ "label": "reharm.com", "url": "https://reharm.com" }],
+  "featured": false,
+  "order": 3,
+  "unverified": false
+}
