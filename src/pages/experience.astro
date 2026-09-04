@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+import Icon from '../components/Icon.astro';
+import { site, EXPERIENCE_LIMIT } from '../data/site';
+
+const all = (await getCollection('experience')).sort((a, b) => a.data.order - b.data.order);
+const shown = all.slice(0, EXPERIENCE_LIMIT);
+---
+<Base title="Experience" description={`Work experience of ${site.name}, ${site.role}.`}>
+  <PageHeader eyebrow="Where I've worked" title="Experience" icon="briefcase" />
+
+  <ol class="list-none">
+    {shown.map((e, i) => <ExperienceItem {...e.data} index={i} />)}
+  </ol>
+
+  <!-- Only the most recent roles live here; LinkedIn holds the full history. -->
+  <a
+    href={site.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="press inline-flex items-center gap-2 border-2 border-ink bg-blue px-5 py-3 text-base font-bold text-ink shadow-hard"
+  >
+    See full experience on LinkedIn
+    <Icon name="arrow" class="h-4 w-4" />
+  </a>
+</Base>

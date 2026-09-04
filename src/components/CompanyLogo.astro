@@ -1,0 +1,33 @@
+---
+interface Props { name: string; logo?: string; index?: number }
+const { name, logo, index = 0 } = Astro.props;
+
+/** Initials, capped at two letters: "PT Nusantara Baskara Jaya" -> "NB". */
+const initials = name
+  .replace(/^PT\s+/i, '')
+  .split(/\s+/)
+  .slice(0, 2)
+  .map((w) => w[0])
+  .join('')
+  .toUpperCase();
+
+// Cycled so adjacent badges never share a fill.
+const fills = ['bg-blue', 'bg-green', 'bg-cream', 'bg-pink'];
+const fill = fills[index % fills.length];
+---
+{logo ? (
+  <img
+    src={logo}
+    alt={`${name} logo`}
+    width="48"
+    height="48"
+    loading="lazy"
+    decoding="async"
+    class="h-12 w-12 shrink-0 rounded-full border-2 border-ink bg-white object-contain shadow-hard-sm"
+  />
+) : (
+  <span
+    aria-hidden="true"
+    class:list={['grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-ink text-sm font-extrabold text-ink shadow-hard-sm', fill]}
+  >{initials}</span>
+)}

@@ -15,6 +15,10 @@ const experience = defineCollection({
     start: z.string(),            // "2021-03"
     end: z.string().nullable(),   // null renders as "Present" — no dead dates to update
     location: z.string(),
+    // Optional: drop a square image in public/logos/ and reference it here
+    // (e.g. "/logos/kano-solution.png"). Falls back to a monogram badge.
+    logo: z.string().optional(),
+    url: z.url().optional(),
     summary: z.string(),
     highlights: z.array(z.string()),
     stack: z.array(z.string()),

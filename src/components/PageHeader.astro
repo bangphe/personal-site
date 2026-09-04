@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+
+interface Props { eyebrow?: string; title: string; icon?: string }
+const { eyebrow, title, icon } = Astro.props;
+---
+<header class="pt-14 pb-10 sm:pt-20">
+  {eyebrow && <p class="mb-2 text-base font-medium text-muted">{eyebrow}</p>}
+  <h1 class="flex items-center gap-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+    {icon && <Icon name={icon} class="h-8 w-8 shrink-0 sm:h-9 sm:w-9" />}
+    {title}
+  </h1>
+</header>

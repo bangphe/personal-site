@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ProjectItem from '../components/ProjectItem.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const client = projects.filter((p) => p.data.type === 'client');
+const personal = projects.filter((p) => p.data.type === 'personal');
+---
+<Base title="Projects" description={`Projects built by ${site.name}, ${site.role}.`}>
+  <PageHeader eyebrow="Things I've built" title="Projects" />
+
+  {client.length > 0 && (
+    <section class="mb-12">
+      <h2 class="mb-6 flex items-center gap-2.5 text-xl font-extrabold text-ink">
+        <Icon name="folder" class="h-5 w-5" />
+        Client Projects
+      </h2>
+      <ol class="list-none">
+        {client.map((p, i) => <ProjectItem {...p.data} index={i} />)}
+      </ol>
+    </section>
+  )}
+
+  {personal.length > 0 && (
+    <section>
+      <h2 class="mb-6 flex items-center gap-2.5 text-xl font-extrabold text-ink">
+        <Icon name="folder" class="h-5 w-5" />
+        Personal Projects
+      </h2>
+      <ol class="list-none">
+        {personal.map((p, i) => <ProjectItem {...p.data} index={i + client.length} />)}
+      </ol>
+    </section>
+  )}
+</Base>

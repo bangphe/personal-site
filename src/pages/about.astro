@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site } from '../data/site';
+---
+<Base title="About" description={`About ${site.name} — ${site.role} based in ${site.location}.`}>
+  <PageHeader eyebrow="A little background" title="About" />
+
+  <div class="max-w-prose space-y-5 text-base leading-relaxed text-muted sm:text-lg">
+    {/* TODO(verify): replace with your own bio. */}
+    <p>
+      I&rsquo;m a backend engineer based in {site.location}. I work mostly in
+      Node.js, Go, PHP and .NET, designing and maintaining REST APIs and the
+      services behind them.
+    </p>
+    <p>
+      Most of my work has been on systems where correctness and throughput
+      matter &mdash; banking applications handling high transaction volumes,
+      data migrations, and the test coverage that keeps them safe to change.
+    </p>
+    <p>
+      Outside of shipping features, I care about the parts that make a codebase
+      survivable: clear boundaries, tests that fail for the right reasons, and
+      documentation someone can actually follow.
+    </p>
+  </div>
+</Base>

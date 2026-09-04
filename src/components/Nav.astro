@@ -1,46 +1,33 @@
 ---
-import Icon from './Icon.astro';
+import { site } from '../data/site';
 
-const links = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
-];
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
-<header class="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur-md dark:border-zinc-800/70 dark:bg-zinc-950/80">
-  <nav aria-label="Main" class="mx-auto flex max-w-prose items-center gap-2 px-4 py-3 sm:px-6">
-    <a href="#top" class="shrink-0 text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">RP</a>
+<header class="border-b-2 border-ink bg-paper">
+  <nav aria-label="Main" class="mx-auto flex max-w-5xl items-center gap-3 px-5 py-4 sm:px-8">
+    <a
+      href="/"
+      aria-label={`RP — ${site.name} home`}
+      class="press grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-ink bg-pink text-base font-extrabold text-ink shadow-hard-sm"
+    >RP</a>
 
-    <!-- Four labels don't fit under ~360px. Scrolling the list keeps every link
-         reachable instead of forcing the whole page wider. -->
-    <ul class="flex min-w-0 flex-1 items-center justify-end gap-0.5 overflow-x-auto [scrollbar-width:none] sm:gap-2 [&::-webkit-scrollbar]:hidden">
-      {links.map((l) => (
-        <li class="shrink-0">
-          <a
-            href={l.href}
-            class="block rounded-md px-2 py-1.5 text-sm text-zinc-600 transition-colors hover:text-accent-600 dark:text-zinc-400 dark:hover:text-accent-400"
-          >{l.label}</a>
-        </li>
-      ))}
+    <!-- Scrolls rather than widening the page when four labels don't fit. -->
+    <ul class="flex min-w-0 flex-1 items-center justify-end gap-1 overflow-x-auto [scrollbar-width:none] sm:gap-6 [&::-webkit-scrollbar]:hidden">
+      {site.nav.map((l) => {
+        const active = path === l.href;
+        return (
+          <li class="shrink-0">
+            <a
+              href={l.href}
+              aria-current={active ? 'page' : undefined}
+              class:list={[
+                'block px-1 py-1 text-sm transition-colors sm:text-base',
+                active ? 'font-extrabold text-ink underline decoration-2 underline-offset-4' : 'font-medium text-muted hover:text-ink',
+              ]}
+            >{l.label}</a>
+          </li>
+        );
+      })}
     </ul>
-
-    <button
-      id="theme-toggle"
-      type="button"
-      aria-label="Toggle dark mode"
-      class="shrink-0 rounded-md p-1.5 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
-    >
-      <span class="block dark:hidden"><Icon name="moon" class="h-4.5 w-4.5" /></span>
-      <span class="hidden dark:block"><Icon name="sun" class="h-4.5 w-4.5" /></span>
-    </button>
   </nav>
 </header>
-
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  toggle?.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
-</script>

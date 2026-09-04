@@ -6,19 +6,18 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   // TODO(verify): swap to https://rizkypurnawan.com once the domain is registered.
-  // Must be set before deploying — sitemap + canonical + OG URLs derive from it.
   site: 'https://personal-site.pages.dev',
 
   integrations: [sitemap()],
 
-  // Downloaded and self-hosted at build time: no request to Google at runtime,
-  // and no render-blocking stylesheet.
+  // Plus Jakarta Sans — geometric grotesque matching the reference, and an
+  // Indonesian typeface. Downloaded and self-hosted at build time.
   fonts: [
     {
       provider: fontProviders.google(),
-      name: 'Inter',
-      cssVariable: '--font-inter',
-      weights: [400, 500, 600, 700],
+      name: 'Plus Jakarta Sans',
+      cssVariable: '--font-jakarta',
+      weights: [400, 500, 600, 700, 800],
       styles: ['normal'],
       subsets: ['latin'],
       fallbacks: ['ui-sans-serif', 'system-ui', 'sans-serif'],

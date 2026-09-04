@@ -3,22 +3,26 @@ import { site } from '../data/site';
 import Icon from './Icon.astro';
 const year = new Date().getFullYear();
 ---
-<footer class="mt-24 border-t border-zinc-200 py-8 dark:border-zinc-800">
-  <div class="mx-auto flex max-w-prose flex-col items-center gap-4 px-6 sm:flex-row sm:justify-between">
-    <p class="text-sm text-zinc-600 dark:text-zinc-400">
+<footer class="mt-24 border-t-2 border-ink py-12">
+  <div class="mx-auto flex max-w-5xl flex-col items-center gap-6 px-5 sm:px-8">
+    <p class="text-center text-sm font-bold text-ink">
       &copy; {year} {site.name}. All rights reserved.
     </p>
-    <ul class="flex items-center gap-1">
+    <ul class="flex items-center gap-4">
       {site.socials.map((s) => (
         <li>
           <a
             href={s.url}
-            target={s.url.startsWith('mailto:') ? undefined : '_blank'}
-            rel={s.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={s.label}
-            class="block rounded-md p-2 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-accent-600 dark:hover:bg-zinc-800 dark:hover:text-accent-400"
+            title={s.label}
+            class:list={[
+              'press grid h-12 w-12 place-items-center rounded-full border-2 border-ink text-ink shadow-hard',
+              s.color,
+            ]}
           >
-            <Icon name={s.icon} />
+            <Icon name={s.icon} class="h-5 w-5" />
           </a>
         </li>
       ))}

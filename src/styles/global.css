@@ -1,42 +1,55 @@
 @import "tailwindcss";
 
-/* Class-based dark mode (Tailwind v4 has no darkMode config key). */
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  /* Single accent, used for links, the CTA and timeline dots. */
-  --color-accent-50: oklch(0.97 0.014 254);
-  --color-accent-100: oklch(0.93 0.032 255);
-  --color-accent-400: oklch(0.71 0.143 254);
-  --color-accent-500: oklch(0.62 0.176 258);
-  --color-accent-600: oklch(0.55 0.192 261);
-  --color-accent-700: oklch(0.49 0.176 263);
+  /* Neo-brutalist palette: near-black ink on a warm grey ground, with flat
+     pastel fills. No gradients, no blur — every edge is a 2px black rule. */
+  --color-ink: #111111;
+  --color-paper: #f0efed;
+  --color-blue: #a8c8ee;
+  --color-pink: #f0a6d8;
+  --color-green: #b9e89e;
+  --color-cream: #f2d9a4;
+  --color-muted: #5b5b5b;
 
-  /* Content column: ~65ch, matching the single-column density of the refs. */
-  --container-prose: 42rem;
+  /* Hard offset shadows — no blur, no alpha. */
+  --shadow-hard: 4px 4px 0 var(--color-ink);
+  --shadow-hard-sm: 2px 2px 0 var(--color-ink);
+  --shadow-hard-lg: 6px 6px 0 var(--color-ink);
+
+  --container-prose: 46rem;
 }
 
 html {
-  scroll-behavior: smooth;
-  /* Offset anchor targets so the sticky nav doesn't cover section headings. */
-  scroll-padding-top: 5rem;
+  background-color: var(--color-paper);
+}
+
+/* Pressable: the shadow collapses as the element shifts into it. */
+@utility press {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: var(--shadow-hard-sm);
+  }
+
+  &:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 var(--color-ink);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  .press:hover, .press:active { transform: none; }
 }
 
-/* Visible, consistent keyboard focus everywhere. */
 :focus-visible {
-  outline: 2px solid var(--color-accent-500);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
 }
