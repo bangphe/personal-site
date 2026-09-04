@@ -1,14 +1,14 @@
 export const site = {
-  name: 'Rizky Purnawan',
+  name: 'Rizky Purnawan Dwi Putra',
   firstName: 'Rizky',
-  role: 'Backend Engineer',
+  role: 'Full Stack Engineer',
   location: 'Sidoarjo, Indonesia',
   // Shown in the hero, first person.
   intro:
     'I build and maintain the systems companies run on — ERP platforms, marketplaces, and the payment flows behind them — mostly in PHP and Node.js.',
   // Meta description, third person for search results.
   description:
-    'Rizky Purnawan is a backend engineer in Sidoarjo, Indonesia, building enterprise platforms, marketplaces and payment integrations in PHP and Node.js since 2012.',
+    'Rizky Purnawan is a full-stack engineer in Sidoarjo, Indonesia, building enterprise platforms, marketplaces and payment integrations in PHP and Node.js since 2012.',
   email: 'rizkypurnawan.dp@gmail.com',
   ctaLabel: "Get in touch",
   linkedin: 'https://id.linkedin.com/in/rizkypurnawan',
