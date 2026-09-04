@@ -1,7 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
+import PostCard from '../components/PostCard.astro';
+import Icon from '../components/Icon.astro';
+import { getMediumPosts } from '../lib/medium';
 import { site } from '../data/site';
+
+const latest = await getMediumPosts(3);
 ---
 <Base>
   <Hero />
@@ -28,4 +33,25 @@ import { site } from '../data/site';
       </p>
     </div>
   </section>
+
+  {latest.length > 0 && (
+    <section class="border-t-2 border-ink py-14 sm:py-20">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+        <h2 class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+          Latest writing
+        </h2>
+        <a
+          href="/blog"
+          class="inline-flex items-center gap-1.5 font-bold text-ink underline decoration-2 underline-offset-4"
+        >
+          All posts
+          <Icon name="arrow" class="h-4 w-4" />
+        </a>
+      </div>
+
+      <ul class="mt-8 grid list-none gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {latest.map((p, i) => <PostCard {...p} index={i} />)}
+      </ul>
+    </section>
+  )}
 </Base>

@@ -65,7 +65,15 @@ function excerpt(text: string, max = 150): string {
  * the visitor a request. Never throws: a feed outage degrades to an empty
  * state on the page instead of failing the build.
  */
+let inflight: Promise<Post[]> | null = null;
+
+/** Cached for the life of the process so a build fetches the feed once. */
 export async function getMediumPosts(limit = 9): Promise<Post[]> {
+  inflight ??= loadPosts();
+  return (await inflight).slice(0, limit);
+}
+
+async function loadPosts(): Promise<Post[]> {
   let xml: string | null = null;
 
   // The dev server re-runs this on every request to /blog. Without a cache
@@ -106,7 +114,7 @@ export async function getMediumPosts(limit = 9): Promise<Post[]> {
     if (!raw) return [];
     const items = Array.isArray(raw) ? raw : [raw];
 
-    return items.slice(0, limit).map((item): Post => {
+    return items.map((item): Post => {
       const unwrap = (v: unknown): string =>
         typeof v === 'string' ? v
           : v && typeof v === 'object' && '__cdata' in v ? String((v as any).__cdata)
