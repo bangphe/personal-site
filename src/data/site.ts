@@ -14,8 +14,8 @@ export const site = {
   // TODO(verify): drop a square photo (>=500x500) at public/profile.jpg
   avatar: '/profile.svg',
   socials: [
-    { label: 'GitHub', url: 'https://github.com/rizkypurnawan', icon: 'github' },
+    { label: 'GitHub', url: 'https://github.com/bangphe', icon: 'github' },
     { label: 'LinkedIn', url: 'https://id.linkedin.com/in/rizkypurnawan', icon: 'linkedin' },
-    { label: 'Email', url: 'mailto:hello@example.com', icon: 'mail' },
+    { label: 'Medium', url: 'https://medium.com/@rizky.purnawan', icon: 'medium' },
   ],
 } as const;

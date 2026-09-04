@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // TODO(verify): swap to https://rizkypurnawan.com once the domain is registered.
   // Must be set before deploying — sitemap + canonical + OG URLs derive from it.
-  site: 'https://rizkypurnawan.pages.dev',
+  site: 'https://personal-site.pages.dev',
 
   integrations: [sitemap()],
 
