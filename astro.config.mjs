@@ -5,8 +5,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO(verify): swap to https://rizkypurnawan.com once the domain is registered.
-  site: 'https://personal-site.pages.dev',
+  // Interim URL. Change to the real domain once it is registered and attached
+  // in Vercel — canonical tags, OG image URLs and the sitemap all derive from
+  // this, so a stale value points search engines and link previews elsewhere.
+  site: 'https://rizkypurnawan.vercel.app',
 
   integrations: [sitemap()],
 
