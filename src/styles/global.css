@@ -17,6 +17,8 @@
   --shadow-hard: 4px 4px 0 var(--color-ink);
   --shadow-hard-sm: 2px 2px 0 var(--color-ink);
   --shadow-hard-lg: 6px 6px 0 var(--color-ink);
+  /* Coloured offset for nav tabs — the fill sits behind, not under the ink. */
+  --shadow-pop: 5px 5px 0 var(--color-blue);
 
   --container-prose: 46rem;
 }
