@@ -7,9 +7,9 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
   <nav aria-label="Main" class="mx-auto flex max-w-5xl items-center gap-3 px-5 py-4 sm:px-8">
     <a
       href="/"
-      aria-label={`RP — ${site.name} home`}
-      class="press grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-ink bg-lilac text-base font-extrabold text-ink shadow-hard-sm"
-    >RP</a>
+      aria-label={`${site.name} — home`}
+      class="press shrink-0 border-2 border-ink bg-blue px-3 py-1.5 text-xs font-extrabold tracking-tight text-ink shadow-hard-sm sm:text-sm"
+    >{site.name}</a>
 
     <!-- Scrolls rather than widening the page when four labels don't fit. -->
     <ul class="flex min-w-0 flex-1 items-center justify-end gap-1 overflow-x-auto [scrollbar-width:none] sm:gap-6 [&::-webkit-scrollbar]:hidden">
