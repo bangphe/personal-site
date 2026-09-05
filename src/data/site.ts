@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Rizky Purnawan Dwi Putra',
+  name: 'Rizky Purnawan',
   firstName: 'Rizky',
   role: 'Full Stack Engineer',
   location: 'Sidoarjo, Indonesia',

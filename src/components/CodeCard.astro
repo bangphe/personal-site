@@ -2,29 +2,29 @@
 /**
  * Dark code card standing in for a portrait. JSON rather than a single
  * language, so the stack reads as the whole list and not as one speciality.
- * Pastel tokens on near-black clear 7:1.
+ * Palette is Monokai, matching the editor this site was written in.
  */
 const file = 'rizky-purnawan.json';
 ---
 <div class="w-full border-2 border-ink shadow-hard-lg">
   <!-- Window chrome -->
-  <div class="flex items-center gap-2 border-b-2 border-ink bg-ink px-3 py-2">
+  <div class="flex items-center gap-2 border-b border-white/10 bg-code-bg px-3 py-2">
     <span class="flex gap-1.5" aria-hidden="true">
       <span class="h-2.5 w-2.5 rounded-full bg-lilac"></span>
       <span class="h-2.5 w-2.5 rounded-full bg-cream"></span>
       <span class="h-2.5 w-2.5 rounded-full bg-green"></span>
     </span>
-    <span class="ml-1 font-mono text-xs text-white/60">{file}</span>
+    <span class="ml-1 font-mono text-xs text-code-dim">{file}</span>
   </div>
 
   <!-- Wide lines scroll inside the card rather than widening the page. -->
-  <div class="overflow-x-auto bg-ink px-4 py-4 [scrollbar-width:thin]">
-    <pre class="font-mono text-[11px] leading-relaxed text-white/85 sm:text-xs"><code><span class="text-white/60">{'{'}</span>
-  <span class="text-cream">"role"</span><span class="text-white/60">:</span>     <span class="text-green">"Full Stack Engineer"</span><span class="text-white/60">,</span>
-  <span class="text-cream">"location"</span><span class="text-white/60">:</span> <span class="text-green">"Sidoarjo, Indonesia"</span><span class="text-white/60">,</span>
-  <span class="text-cream">"since"</span><span class="text-white/60">:</span>    <span class="text-lilac">2012</span><span class="text-white/60">,</span>
-  <span class="text-cream">"stack"</span><span class="text-white/60">:</span>    <span class="text-white/60">[</span><span class="text-green">"PHP"</span><span class="text-white/60">,</span> <span class="text-green">"Node.js"</span><span class="text-white/60">,</span> <span class="text-green">".NET"</span><span class="text-white/60">,</span> <span class="text-green">"Go"</span><span class="text-white/60">,</span> <span class="text-green">"Vue"</span><span class="text-white/60">],</span>
-  <span class="text-cream">"focus"</span><span class="text-white/60">:</span>    <span class="text-white/60">[</span><span class="text-green">"APIs"</span><span class="text-white/60">,</span> <span class="text-green">"payments"</span><span class="text-white/60">,</span> <span class="text-green">"platforms"</span><span class="text-white/60">]</span>
-<span class="text-white/60">{'}'}</span></code></pre>
+  <div class="overflow-x-auto bg-code-bg px-4 py-4 [scrollbar-width:thin]">
+    <pre class="font-mono text-[11px] leading-relaxed text-code-fg sm:text-xs"><code><span class="text-code-dim">{'{'}</span>
+  <span class="text-code-fg">"role"</span><span class="text-code-dim">:</span>     <span class="text-code-string">"Full Stack Engineer"</span><span class="text-code-dim">,</span>
+  <span class="text-code-fg">"location"</span><span class="text-code-dim">:</span> <span class="text-code-string">"Sidoarjo, Indonesia"</span><span class="text-code-dim">,</span>
+  <span class="text-code-fg">"since"</span><span class="text-code-dim">:</span>    <span class="text-code-number">2012</span><span class="text-code-dim">,</span>
+  <span class="text-code-fg">"stack"</span><span class="text-code-dim">:</span>    <span class="text-code-dim">[</span><span class="text-code-string">"PHP"</span><span class="text-code-dim">,</span> <span class="text-code-string">"Node.js"</span><span class="text-code-dim">,</span> <span class="text-code-string">".NET"</span><span class="text-code-dim">,</span> <span class="text-code-string">"Go"</span><span class="text-code-dim">,</span> <span class="text-code-string">"Vue"</span><span class="text-code-dim">],</span>
+  <span class="text-code-fg">"focus"</span><span class="text-code-dim">:</span>    <span class="text-code-dim">[</span><span class="text-code-string">"APIs"</span><span class="text-code-dim">,</span> <span class="text-code-string">"payments"</span><span class="text-code-dim">,</span> <span class="text-code-string">"platforms"</span><span class="text-code-dim">]</span>
+<span class="text-code-dim">{'}'}</span></code></pre>
   </div>
 </div>

@@ -13,6 +13,15 @@
   --color-cream: #f2d9a4;
   --color-muted: #5b5b5b;
 
+  /* Monokai, matching the editor theme. Ratios against --color-code-bg:
+     fg 13.9:1, string 10.4:1, number 5.2:1, dim 7.1:1 — all clear AA.
+     Monokai's own comment grey (#75715e) is 3.0:1 and is deliberately unused. */
+  --color-code-bg: #272822;
+  --color-code-fg: #f8f8f2;
+  --color-code-string: #e6db74;
+  --color-code-number: #ae81ff;
+  --color-code-dim: #b5b3aa;
+
   /* Hard offset shadows — no blur, no alpha. */
   --shadow-hard: 4px 4px 0 var(--color-ink);
   --shadow-hard-sm: 2px 2px 0 var(--color-ink);
