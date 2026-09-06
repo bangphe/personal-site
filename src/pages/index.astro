@@ -4,7 +4,6 @@ import Hero from '../components/Hero.astro';
 import PostCard from '../components/PostCard.astro';
 import Icon from '../components/Icon.astro';
 import { getMediumPosts } from '../lib/medium';
-import { site } from '../data/site';
 
 const latest = await getMediumPosts(3);
 ---
@@ -12,29 +11,30 @@ const latest = await getMediumPosts(3);
   <Hero />
 
   <section id="about" class="border-t-2 border-ink py-14 sm:py-20">
-    <h2 class="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">Where it starts</h2>
+    <h2 class="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">What I do</h2>
 
+    <!-- hyphens-auto keeps justified text from opening rivers of whitespace
+         in a narrow measure. -->
     <!-- hyphens-auto keeps justified text from opening rivers of whitespace
          in a narrow measure. -->
     <div class="mt-8 max-w-prose space-y-5 hyphens-auto text-justify text-base leading-relaxed text-muted sm:text-lg">
       <p>
-        I&rsquo;m a full-stack engineer in {site.location}, and I&rsquo;ve been
-        building for the web since 2012. These days I&rsquo;m at Kano Solution,
-        an IT company working on ERP and big-data systems, where I build the
-        platforms our clients run their operations on.
+        I build and maintain the systems businesses run on &mdash; marketplaces,
+        property platforms, ERP, and the payment flows behind them. I&rsquo;ve
+        been working on the web since 2012, mostly in PHP and Node.js.
       </p>
       <p>
-        Most of that work is unglamorous in a good way: designing and maintaining
-        RESTful APIs, tuning databases for performance and storage, writing stored
-        procedures that generate the reports people actually read on Monday
-        morning, and automating the parts nobody wants to do by hand.
+        Much of my work involves payments and transactions, where correctness
+        matters most. I&rsquo;ve built escrow flows on Xendit, seller wallets
+        with automated payouts, and payment integrations with Midtrans and
+        PayFort. Alongside that, I design and maintain REST APIs, tune databases
+        for performance, and handle the integrations that hold these systems
+        together.
       </p>
       <p>
-        Alongside it I take on client work, usually where money moves &mdash; an
-        Indonesian auction marketplace with escrow payments and a seller ledger, a
-        property management platform in Saudi Arabia, a music learning site with a
-        payment gateway. Laravel and Node.js mostly, and a healthy respect for
-        idempotency. I write about what I learn over on Medium.
+        If you&rsquo;re building something where transactions have to settle
+        correctly and keep running long after launch, that&rsquo;s the work I do
+        best.
       </p>
     </div>
   </section>
