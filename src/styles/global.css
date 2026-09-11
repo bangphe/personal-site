@@ -21,6 +21,9 @@
   --color-code-string: #e6db74;
   --color-code-number: #ae81ff;
   --color-code-dim: #b5b3aa;
+  /* Monokai cyan / green for the contact terminal. Prompt 8.7:1, ok 9.2:1. */
+  --color-code-prompt: #66d9ef;
+  --color-code-ok: #a6e22e;
 
   /* Hard offset shadows — no blur, no alpha. */
   --shadow-hard: 4px 4px 0 var(--color-ink);

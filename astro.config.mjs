@@ -8,6 +8,10 @@ export default defineConfig({
   // Canonical tags, OG image URLs and the sitemap all derive from this.
   site: 'https://rizkypurnawan.com',
 
+  redirects: {
+    '/contact': '/',
+  },
+
   integrations: [sitemap()],
 
   // Medium's CDN images are downloaded and re-encoded at build time, so the

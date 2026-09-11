@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import PostCard from '../components/PostCard.astro';
+import ContactTerminal from '../components/ContactTerminal.astro';
 import Icon from '../components/Icon.astro';
 import { getMediumPosts } from '../lib/medium';
 
@@ -13,8 +14,6 @@ const latest = await getMediumPosts(3);
   <section id="about" class="border-t-2 border-ink py-14 sm:py-20">
     <h2 class="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">What I do</h2>
 
-    <!-- hyphens-auto keeps justified text from opening rivers of whitespace
-         in a narrow measure. -->
     <!-- hyphens-auto keeps justified text from opening rivers of whitespace
          in a narrow measure. -->
     <div class="mt-8 max-w-prose space-y-5 hyphens-auto text-justify text-base leading-relaxed text-muted sm:text-lg">
@@ -59,4 +58,6 @@ const latest = await getMediumPosts(3);
       </ul>
     </section>
   )}
+
+  <ContactTerminal />
 </Base>

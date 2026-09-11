@@ -21,7 +21,6 @@ export const site = {
     { href: '/experience', label: 'Experience' },
     { href: '/projects', label: 'Projects' },
     { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
   ],
 } as const;
 
